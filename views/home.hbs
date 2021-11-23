@@ -1,0 +1,29 @@
+<div class="container text-center">
+  <h1 class="p-3">Iot System Data</h1>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+        <th scope="col">Status</th>
+        <th scope="col">Time</th>
+        <th scope="col">NumberOfDeny</th>
+      </tr>
+    </thead>
+    <tbody id="showData">
+      {{#each data}}
+      <tr>
+        <th scope="row">{{type}}</th>
+        <td class="{{toLowerCase this.status}}">{{this.status}}</td>
+        <td>{{this.time}}</td>
+        <td>{{this.nod}}</td>
+      </tr>
+      {{/each}}
+    </tbody>
+  </table>
+</div>
+
+<script>
+  window.setTimeout(function () {
+    window.location.reload();
+  }, 3000);
+</script>
